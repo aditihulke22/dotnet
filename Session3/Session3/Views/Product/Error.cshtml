@@ -1,0 +1,39 @@
+﻿@model Session3.Models.Product
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+    @using (Html.BeginForm("Create", "Product"))
+    {
+    <table class="table table-bordered">
+        <tr>
+            <td>Product Id</td>
+            <td>@Html.TextBox("Pid")</td>
+            <td>@Html.ValidationMessageFor(m=>m.Pid)</td>
+        </tr>
+        <tr>
+            <td>Product Name</td>
+            <td>@Html.TextBox("Pname")</td>
+            <td>@Html.ValidationMessageFor(m=>m.Pname)</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>@Html.TextBox("Price")</td>
+            <td>@Html.ValidationMessageFor(m=>m.Price)</td>
+        </tr>
+        <tr>
+            <td>Stock</td>
+            <td>@Html.TextBox("Stock")</td>
+            <td>@Html.ValidationMessageFor(m=>m.Stock)</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" value="Add" />
+            </td>
+        </tr>
+    </table>
+    }
+</div>

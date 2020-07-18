@@ -1,0 +1,33 @@
+﻿@model Session3.Models.Product
+
+@{
+}
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+    <table class="table table-bordered" style="height:auto">
+        <tr>
+            <td>Product Id</td>
+            <td>@Html.TextBox("Pid")</td>
+        </tr>
+        <tr>
+            <td>Product Name</td>
+            <td>@Html.TextBox("Pname")</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>@Html.TextBox("Price")</td>
+        </tr>
+        <tr>
+            <td>Stock</td>
+            <td>@Html.TextBox("Stock")</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Add" />
+            </td>
+        </tr>
+    </table>
+    }
+</div> 

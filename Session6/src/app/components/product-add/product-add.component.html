@@ -1,0 +1,25 @@
+<div class="container">
+    <table>
+      <tr>
+        <td>Product ID</td>
+        <td><input type="number" [(ngModel)]="product.Pid"></td>
+      </tr>
+      <tr>
+        <td>Product Name</td>
+        <td><input type="text" [(ngModel)]="product.Pname"></td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td><input type="number" [(ngModel)]="product.Price"></td>
+      </tr>
+      <tr>
+        <td>Stock</td>
+        <td><input type="number" [(ngModel)]="product.Stock"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-primary" (click)="addNewProduct()">Add Product</button>
+        </td>
+      </tr>
+    </table>
+  </div>

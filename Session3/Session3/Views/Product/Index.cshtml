@@ -1,0 +1,23 @@
+﻿@model List<Session3.Models.Product>
+
+<a href="Product/Create">Add New Product</a>
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Pid</th>
+            <th>Pname</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Pid</td>
+                <td>@item.Pname</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+            </tr>
+        }
+    </table>
+</div>
+

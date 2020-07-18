@@ -1,0 +1,46 @@
+<div class="container">
+    
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="pid">
+            </td>
+        </tr>
+        <tr>
+            <td>Project Name</td>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="pname">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+              <button class="btn-primary" (click)="Add()">Add</button>
+              <button class="btn-primary" (click)="Delete()">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-info">
+              {{errmsg}}
+            </td>
+        </tr>
+        
+    </table>
+
+        <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th><th>PName</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list">
+            <td>{{item.pid}}</td>
+            <td>{{item.pname}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>
+
